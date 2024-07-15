@@ -1,0 +1,22 @@
+---
+interface Props {
+	image: string;
+	alt: string;
+	height: string;
+	width: string;
+}
+
+const { image, alt, height, width } = Astro.props;
+---
+
+<li class="image-card">
+	<img src={image} alt={alt} height={height} width={width}>
+</li>
+
+<style>
+	.image-card {
+		justify-content: center;
+		list-style: none;
+		display: flex;
+	}
+</style>

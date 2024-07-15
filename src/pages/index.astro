@@ -1,0 +1,53 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Mosbius Designs">
+	<main>
+		<div class="intro">
+		<h1>Mosbius Designs</h1>
+		<p class="instructions">
+			<p>Mosbius Designs is a leading architecture firm known for its innovative and sustainable design solutions. Established in 2009, Mosbius Designs has a reputation for weaving the thread connecting innovative and class designs into something unique.</p>
+		</p></div>
+		<div>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="/portfolio"
+				title="International"
+				body="Completed projects on three continents, in 14 different countries."
+			/>
+			<Card
+				href="/team"
+				title="Experience"
+				body="30+ years of excellence in the field of architecture."
+			/>
+			<Card
+				href="/testimonials"
+				title="Principled"
+				body="Innovative design deeply rooted in classic architectural principles."
+			/>
+		</ul></div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		max-width: calc(100% - 2rem);
+		color: #FFFFFF;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.intro {
+		text-align: center;
+		padding-bottom: 2rem;
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>

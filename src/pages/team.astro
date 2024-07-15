@@ -1,0 +1,68 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TeamCard from '../components/Team-Card.astro';
+---
+
+<Layout title="Mosbius Designs">
+	<main>
+		<div class="intro">
+		<h1>The Mosbius Team</h1>
+		<p class="instructions">
+			<p>The professional team at Mosbius Designs brings a fresh vision and focus to each project they approach. Their expertise and knowledge are fully utilized to serve you better. The Mosbius Team combines creativity with technical expertise, focusing on sustainable practices and innovative use of materials. The firm collaborates closely with clients, consultants, and contractors to deliver projects that exceed expectations.</p>
+		</p></div>
+		<div>
+		<ul role="list" class="link-card-grid">
+			<TeamCard
+				title="Theodore Mosby"
+				subtitle="Principal Architect / Owner"
+				body="Theodore Mosby has more than 25 years of architectural design. He is a graduate of Wesleyan University and a member of the American Institute of Architects. He holds architect licenses in more than 20 states. Theodore has worked on a wide range of projects in a variety of industries including: educational facilities, retail space, office centers, optometry clinics, and restaurant chains. He has also taught Architecture at Columbia University."
+			/>
+			<TeamCard
+				title="Elizabeth Laurent"
+				subtitle="Design Principal"
+				body="Elizabeth Laurent has been working at Mosbius Designs since 2012. She has 10+ years of Design and Project Management experience and is NCARB certified. She graduated from Columbia University "
+				/>
+			<TeamCard
+				title="Scott Corbusier"
+				subtitle="Lead Designer"
+				body="Scott Corbusier started working at Mosbius Designs in 2012. He has 100+ years of Project Management and Computer-Aided Design (CAD) experience. Scott graduated from Columbia University"
+				/>
+			<TeamCard
+				title="Rachel Zaha"
+				subtitle="Lead Interior Designer"
+				body="Rachel Zaha has been working at Mosbius Designs since 2013 and is currently the head of our interior design department. She has 10+ years of interior design & project management experience. Rachel graduated from Columbia University."
+				/>
+			<TeamCard
+				title="Louis Calatrava"
+				subtitle="Interior Designer"
+				body="Louis Calatrava has been working at Mosbius Designs since 2022. He started as an intern and has transitioned into a full-time Interior Designer. He graduated from the Columbia University with a degree in Interior Design."
+				/>
+			<TeamCard
+				title="Cook Pu"
+				subtitle="CAD Specialist"
+				body="Cook Pu has been working at Mosbius Designs since 2021. He graduated from Greendale Community College with a degree in Architectural Technology in 2020 and has 3 years of Computer-Aided Design (CAD) experience."
+				/>
+		</ul></div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		max-width: calc(100% - 2rem);
+		color: #FFFFFF;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.intro {
+		text-align: center;
+		padding-bottom: 2rem;
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(1, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>

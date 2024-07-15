@@ -1,0 +1,120 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<header>
+			<div class='container'>
+				<a href='/'>
+					<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 601 358" fill="none">
+						<path d="M585 17C543 -41 181 73 173 85C165 97 167 107 173 120C179 133 489 173 371 193C433 254 148 303 148 333C148 363 519 366 546 333C573 300 627 75 585 17Z" fill="#47E2EC"/>
+						<path d="M49 193L100 144L1 193L89 260L49 193Z" fill="#47E2EC"/>
+						<path d="M371 193C433 254 148 303 148 333C148 363 519 366 546 333C573 300 627 75 585 17C543 -41 181 73 173 85C165 97 167 107 173 120C179 133 489 173 371 193ZM371 193C310 225 49 193 49 193M49 193L100 144L1 193L89 260L49 193Z" stroke="black"/>
+					</svg>
+					<h1>Mosbius</h1>
+				</a>
+				<div class='links'>
+					<a
+					href='/team'
+					rel='noopener noreferrer'
+					aria-label='Team'
+					>
+					Team
+					</a>
+					<a
+					href='/portfolio'
+					rel='noopener noreferrer'
+					aria-label='One'
+					>
+					Portfolio
+					</a>
+					<a
+					href='/testimonials'
+					rel='noopener noreferrer'
+					aria-label='One'
+					>
+					Testimonials
+					</a>
+					<a
+					href='/contact'
+					rel='noopener noreferrer'
+					aria-label='One'
+					>
+					Contact
+					</a>
+				</div>
+			</div>
+		</header>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background: #292929 ;
+		background-size: 224px;
+	}
+	code {
+		font-family:
+			Menlo,
+			Monaco,
+			Lucida Console,
+			Liberation Mono,
+			DejaVu Sans Mono,
+			Bitstream Vera Sans Mono,
+			Courier New,
+			monospace;
+	}
+	header {
+		color: #FFFFFF;
+		border-bottom: .1rem solid  #FFFFFF;
+		padding-left: 2%;
+		padding-right: 2%;
+		}
+	a {
+		text-decoration: none;
+		color: #FFFFFF;
+		gap: 5px;
+	}
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.container > a {
+		display: flex;
+		align-items: center;
+	}
+	.links {
+		display: flex;
+		justify-content: space-between;
+		a {
+		margin: 0 15px;
+		}
+	}
+</style>

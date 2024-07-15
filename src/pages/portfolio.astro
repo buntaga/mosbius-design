@@ -1,0 +1,63 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ImageCard from '../components/Image-Card.astro';
+---
+
+<Layout title="Mosbius Designs">
+	<main>
+		<div class="intro">
+		<h1>The Mosbius Portfolio</h1>
+		<p class="instructions">
+			<p>Whether you’re in the need for a modern large-scale project, a more efficient small-scale project that has better flow, or a completely new design for a ground-up project, we ensure that your goals will be met to their fullest extent. Browse through our gallery below and see what makes us stand out from our competition.</p>
+		</p></div>
+		<div>
+		<ul role="list" class="image-card-grid">
+			<ImageCard
+				image="/GNB1.jpg"
+				alt="image1"
+				height='400px'
+				width='400px'
+			/>
+			<ImageCard
+				image="/GNB2.PNG"
+				alt="image2"
+				height='400px'
+				width='400px'
+			/>
+			<ImageCard
+				image="/GNB3.PNG"
+				alt="image3"
+				height='400px'
+				width='400px'
+			/>
+			<ImageCard
+				image="/GNB4.PNG"
+				alt="image4"
+				height='400px'
+				width='400px'
+			/>
+		</ul></div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		max-width: calc(100% - 2rem);
+		color: #FFFFFF;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.intro {
+		text-align: center;
+		padding-bottom: 2rem;
+	}
+	.image-card-grid {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+		list-style: none;
+	}
+</style>

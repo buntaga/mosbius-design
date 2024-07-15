@@ -1,0 +1,63 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TeamCard from '../components/Team-Card.astro';
+---
+
+<Layout title="Mosbius Designs">
+	<main>
+		<div class="intro">
+		<h1>Client Testimonials</h1>
+		<p class="instructions">
+			<p>At Mosbius Designs, we proudly stand by our work. However, you don’t have to take our word for it; read through our client testimonials below and find out why our clients appreciate working with our firm.</p>
+		</p></div>
+		<div>
+		<ul role="list" class="link-card-grid">
+			<TeamCard
+				title="Hammond Druthers"
+				subtitle="Spokane Financial Institution"
+				body="We wanted a modern bulding that still captured the distinct flavor and history of the northwest, and that is exactly what Mosbius Designs provided!"
+			/>
+			<TeamCard
+				title="James Stinson"
+				subtitle="Shaker Falls Community Library"
+				body="When we were designing and building the building, Mr. Mosby was always willing to sit down to discuss the progress of the job and listen to our input. Since he and his family stem from Ohio."
+			/>
+			<TeamCard
+				title="Marshall Eriksen"
+				subtitle="Minnesota Lake Home"
+				body="You have been nothing but top notch since the first time I met you.  You made Lily and I feel at ease about out upcoming project. If everything is looking good from Ted we don't plan on even contacting any other architects.  We are very pleased with how everything is going so far."
+			/>
+			<TeamCard
+				title="Carl and Wendy"
+				subtitle="Florida Retirement Home"
+				body="We are very happy with the finished result and credit Ted with seeing the potential that we would never have seen ourselves."
+			/>
+			<TeamCard
+				title="Carl and Wendy"
+				subtitle="MacLaren's Pub"
+				body="We found Professor Mosby to be very creative and knowledgeable, yet equally personable. I have worked with three other architects prior to my experience with Professor Mosby, and our experience with Professor Mosby was by far the best."
+			/>
+		</ul></div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		max-width: calc(100% - 2rem);
+		color: #FFFFFF;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.intro {
+		text-align: center;
+		padding-bottom: 2rem;
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>

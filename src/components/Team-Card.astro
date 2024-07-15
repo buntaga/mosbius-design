@@ -1,0 +1,48 @@
+---
+interface Props {
+	title: string;
+	subtitle: string;
+	body: string;
+}
+
+const { title, subtitle, body } = Astro.props;
+---
+
+<li class="link-card">
+	<span>
+		<h2>
+			{title}
+		</h2>
+		<h3>
+			{subtitle}
+		</h3>
+		<p>
+			{body}
+		</p>
+	</span>
+</li>
+<style>
+	.link-card {
+		list-style: none;
+		display: flex;
+		padding: 1px;
+		background-color: white;
+		background-image: none;
+		border-radius: 7px;max-width: 900px;
+		margin: auto;
+	}
+	.link-card > span {
+		line-height: 1.4;
+		padding: calc(1.5rem - 1px);
+		border-radius: 8px;
+		color: black;
+		background-color: white;
+		text-align: center;
+	}
+	h3 {
+		color: #312f2f;
+	}
+	p {
+		text-align: left;
+	}
+</style>
